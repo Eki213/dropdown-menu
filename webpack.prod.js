@@ -5,11 +5,6 @@ const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 module.exports = merge(common, {
   mode: "production",
-  entry: {
-    components: "./src/js/index.js",
-    carousel: "./src/js/carousel.js",
-    dropdown: "./src/js/dropdown.js",
-  },
   devtool: "source-map",
   module: {
     rules: [

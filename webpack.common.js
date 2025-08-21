@@ -2,6 +2,11 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
+  entry: {
+    components: "./src/js/index.js",
+    carousel: "./src/js/carousel.js",
+    dropdown: "./src/js/dropdown.js",
+  },
   output: {
     filename: "js/[name].js",
     path: path.resolve(__dirname, "dist"),
@@ -16,6 +21,7 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: "./src/template.html",
+      chunks: ["components"],
     }),
   ],
   module: {

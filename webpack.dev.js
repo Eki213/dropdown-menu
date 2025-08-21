@@ -3,7 +3,6 @@ const common = require("./webpack.common.js");
 
 module.exports = merge(common, {
   mode: "development",
-  entry: "./src/js/index.js",
   devtool: "source-map",
   devServer: {
     static: "./dist",
