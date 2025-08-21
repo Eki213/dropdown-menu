@@ -1,0 +1,79 @@
+.menu {
+  display: none;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-radius: 0.3rem;
+  box-sizing: inherit;
+}
+
+.menu.visible {
+  display: block;
+}
+
+.dropdown-menu {
+  display: inline-block;
+  box-sizing: border-box;
+  width: 15rem;
+}
+
+.toggle-button,
+.menu,
+.menu-item {
+  text-align: left;
+  background: white;
+  border: 2.5px solid rgb(33, 108, 221);
+  width: 100%;
+}
+
+.toggle-button {
+  position: relative;
+  margin-bottom: 0.3rem;
+  border-radius: 0.3rem;
+}
+
+.menu-item {
+  border: none;
+}
+
+.menu-item:first-child {
+  border-radius: 0.25rem 0.25rem 0 0;
+}
+
+.menu-item:last-child {
+  border-radius: 0 0 0.25rem 0.25rem;
+}
+
+.menu-item:hover,
+.toggle-button:hover {
+  background-color: rgb(222, 222, 235);
+  color: rgb(12, 12, 223);
+}
+
+.toggle-button {
+  font-family: inherit;
+}
+
+.menu-item,
+.toggle-button {
+  cursor: pointer;
+  padding: 0.4rem;
+  font-size: 1.5rem;
+  box-sizing: inherit;
+}
+
+.toggle-button::before {
+  content: "";
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  padding: 0.75rem;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5' stroke='currentColor' class='size-6'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='m19.5 8.25-7.5 7.5-7.5-7.5' /%3E%3C/svg%3E%0A");
+  right: 0.3rem;
+  top: 0.53rem;
+}
+
+ 
+.toggle-button:has(+ .menu.visible)::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5' stroke='currentColor' class='size-6'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='m4.5 15.75 7.5-7.5 7.5 7.5' /%3E%3C/svg%3E%0A");
+}
